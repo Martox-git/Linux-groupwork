@@ -1,0 +1,77 @@
+-- MySQL dump 10.13  Distrib 8.0.23, for Linux (x86_64)
+--
+-- Host: localhost    Database: boklista
+-- ------------------------------------------------------
+-- Server version	8.0.23-0ubuntu0.20.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Movies`
+--
+
+DROP TABLE IF EXISTS `Movies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Movies` (
+  `ID` int NOT NULL,
+  `Title` varchar(50) NOT NULL,
+  `IMDB` varchar(50) NOT NULL,
+  `Year` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Movies`
+--
+
+LOCK TABLES `Movies` WRITE;
+/*!40000 ALTER TABLE `Movies` DISABLE KEYS */;
+INSERT INTO `Movies` VALUES (1,'Maniac','3.7','1934'),(2,'Reefer Madness','3.8','1936'),(3,'The terror of Tiny town','3.9','1938'),(4,'No orchids for Miss blandish','6.8','1948'),(5,'The Babe Ruth story','5.2','1948'),(6,'Glen or Glenda','4.2','1953'),(7,'Robot Monster','3.0','1953'),(8,'The Conqueror','3.7','1956'),(9,'Fire Maidens from Outer Space','2.4','1956'),(10,'Plan 9 from Outer Space','4.0','1959'),(11,'The Beast of Yucca Flats','2.2','1961'),(12,'Eegah','2.2','1962'),(13,'The creeping Terror','2.2','1964'),(14,'Santa claus Conquers the Martians','2.7','1964'),(15,'The Horror of party Beach','3.2','1964'),(16,'The incredibly Strange Creatures Who','2.2','1964'),(17,'Monster a Go-Go!','2.2','1965'),(18,'Manos: The Hands of Fate','1.9','1966'),(19,'A Place of Lovers','5.6','1968'),(20,'They Saved Hitler\'s Brain','2.6','1968'),(21,'Myra Brecginridge','4.','1970'),(22,'Zaat','2.5','1971'),(23,'An American Hippie in Israel','5.0','1972'),(24,'Bat Pussy','8.1','1973'),(25,'Karvat(The Hair)','5.5','1974'),(26,'At Long Last Lover','5.1','1975'),(27,'HaMal\'ach Haya Satan','4.1','1976'),(28,'Exorcist II: The heretic','3.8','1977'),(29,'The Swarm','4.5','1978'),(30,'I spit on Your Grave','6.3','1978'),(31,'Never say never','1.6','2011');
+/*!40000 ALTER TABLE `Movies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `books`
+--
+
+DROP TABLE IF EXISTS `books`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `books` (
+  `ID` int NOT NULL,
+  `Title` varchar(50) NOT NULL,
+  `Author` varchar(50) NOT NULL,
+  `Year` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `books`
+--
+
+LOCK TABLES `books` WRITE;
+/*!40000 ALTER TABLE `books` DISABLE KEYS */;
+INSERT INTO `books` VALUES (1,'To Kill a Mockingbird','Harper Lee','1960 '),(2,'Fifty Shades of Grey','E L James','2011'),(3,'Harry Potter and the Philosopher’s Stone','J.K. Rowling','1997'),(4,'The Lord of the Rings','J.R.R. Tolkien','1954'),(5,'The Great Gatsby','F. Scott Fitzgerald','1925'),(6,'Pride and Prejudice','Jane Austen','1813'),(7,'The Diary Of A Young Girl','Anne Frank','1947'),(8,'The Book Thief','Markus Zusak','2005'),(9,'The Hobbit','J.R.R. Tolkien','1937'),(10,'Little Women','Louisa May Alcott','1868'),(11,'Fahrenheit 451','Ray Bradbury','1953'),(12,'Jane Eyre','Charlotte Bronte','1847'),(13,'Animal Farm','George Orwell','1945'),(14,'Gone with the Wind','Margaret Mitchell','1936'),(15,'The Catcher in the Rye','J.D. Salinger','1951'),(16,'Charlotte’s Web\"','E.B. White','1953'),(17,'The Lion the Witch and the Wardrobe','C.S. Lewis','1950'),(18,'The Grapes of Wrath','John Steinbeck','1939'),(19,'Lord of the Flies','William Golding','1954'),(20,'The Kite Runner','Khaled Hosseini','2003'),(21,'Of Mice and Men','John Steinbeck','1937'),(22,'A Tale of Two Cities','Charles Dickens','1859'),(23,'Romeo and Juliet','William Shakespeare','1597'),(24,'The Hitchhikers Guide to the Galaxy','Douglas Adams','1979'),(25,'Wuthering Heights','Emily Bronte','1847'),(26,'The Color Purple\"','Alice Walker','1982'),(27,'Alice in Wonderland','Lewis Carroll','1865'),(28,'Frankenstein','Mary Shelley','1818'),(29,'The Adventures of Huckleberry Finn','Mark Twain','1884'),(30,'Slaughterhouse-Five','Kurt Vonnegut','1969');
+/*!40000 ALTER TABLE `books` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-02-06  0:00:01
