@@ -1,0 +1,12 @@
+[Unit]
+Description=Kollar om Apache2 och MySQL är aktivt!
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/gemensammaskript/
+ExecStart=/home/ubuntu/gemensammaskript/apache2.sh
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
